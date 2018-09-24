@@ -17,23 +17,20 @@ public class DollarTest {
         Dollar five = new Dollar(5);
 
 
-
         // When  -> quando
-        five.times(2);
+        Dollar product = five.times(2);
 
         // Then ->
         int expectedResultMultiplication10 = 10;
-        assertEquals(expectedResultMultiplication10 , five.amount);
-
-
+        assertEquals(expectedResultMultiplication10 , product.amount);
 
 
         // When  -> quando
-        five.times(3);
+         product = five.times(3);
 
         // Then ->
         int expectedResultMultiplication15 = 15;
-        assertEquals(expectedResultMultiplication15 , five.amount);
+        assertEquals(expectedResultMultiplication15 , product.amount);
 
     }
 
