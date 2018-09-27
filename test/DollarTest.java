@@ -12,22 +12,10 @@ public class DollarTest {
     @Test
     public void testMultiplication2(){
 
-        //Given -> dado que
         Dollar five = new Dollar(5);
 
-        // When  -> quando
-        Dollar product = five.times(2);
-
-        // Then ->
-        assertEquals(new Dollar(10), product);
-
-
-        // When  -> quando
-         product = five.times(3);
-
-        // Then ->
-        assertEquals(new Dollar(15) , product);
-
+        assertEquals(new Dollar(10), five.times(2));
+        assertEquals(new Dollar(15) , five.times(3));
     }
 
     @Test
