@@ -1,4 +1,6 @@
 import org.junit.jupiter.api.Test;
+import sun.jvm.hotspot.oops.DefaultOopVisitor;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,16 +19,14 @@ public class DollarTest {
         Dollar product = five.times(2);
 
         // Then ->
-        int expectedResultMultiplication10 = 10;
-        assertEquals(expectedResultMultiplication10 , product.amount);
+        assertEquals(new Dollar(10), product);
 
 
         // When  -> quando
          product = five.times(3);
 
         // Then ->
-        int expectedResultMultiplication15 = 15;
-        assertEquals(expectedResultMultiplication15 , product.amount);
+        assertEquals(new Dollar(15) , product);
 
     }
 
