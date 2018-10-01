@@ -1,7 +1,11 @@
 
-public class Money {
+public  class Money {
 
     protected int amount;
+
+    public static Dollar dollar(int amount) {
+        return new Dollar(amount);
+    }
 
 
     @Override
@@ -10,4 +14,5 @@ public class Money {
         return amount == money.amount
                 && getClass().equals(money.getClass());
     }
+
 }
